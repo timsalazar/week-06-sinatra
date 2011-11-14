@@ -55,6 +55,14 @@ describe "Twitter Info" do
   #
   # when that happens, return a new template file named 404.haml
   #
-  it "should return a custom 404 page when the username cannot be found"
+  it "should return a custom 404 page when the username cannot be found" do
+
+  get "/user/thisuserdoesnotexist"
+  
+  last_response.body.should match (/Sorry, we didn't find that user. Try another username./)
+  last_response.status.should == 200
+
+end
+
 
 end
