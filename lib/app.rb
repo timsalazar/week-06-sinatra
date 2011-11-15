@@ -10,6 +10,10 @@ class TwitterInfo < Sinatra::Application
     haml :index
   end
 
+  get '/stylesheet.css' do
+    sass :stylesheet
+  end
+  
   get '/user/:username' do
     begin
       @user = params[:username]
@@ -27,5 +31,7 @@ class TwitterInfo < Sinatra::Application
   post // do
     halt 500, 'Whoa. Sorry. No POSTs allowed.'
   end
+ 
+
 
 end

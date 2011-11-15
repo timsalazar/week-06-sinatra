@@ -1,13 +1,21 @@
 %html
   %head
     %title Twitter Info Application
-
+  %link{:rel => "stylesheet", :href => "/stylesheet.css", :type => "text/css", :media => "all"}
   %body
     %h2 Welcome
 
     %p
       Append a twitter username on the url to display how many followers the user has
-      %br
-      For example:
-      %br
-        %a{:href => '/user/burtlo'} /user/burtlo
+      %p
+      For example: /user/username_here
+  %a{:href => '/user/burtlo'} F. Webber
+  %br
+  %a{:href => '/user/faloonatic'} B. Faloona
+  %br
+  %a{:href => '/user/ivanoats'} I. Storck
+  %br
+  %a{:href => '/user/timsalazar'} T. Salazar
+  %br
+  %a{:href => '/user/thisuserdoesnotexist'} User not found
+
